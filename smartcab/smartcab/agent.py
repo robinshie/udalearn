@@ -46,9 +46,9 @@ class LearningAgent(Agent):
             self.epsilon = 0.
         else:
             #self.epsilon -= 0.05
-            self.alpha =  math.pow(0.99,self.t)
-            self.epsilon = math.pow(0.99,self.t)
-           
+            #self.alpha =  0.5*math.pow(0.99,self.t)
+            #self.epsilon = math.pow(0.99,self.t)
+            self.epsilon = 0.5 * math.pow(0.99,self.t)
 
     def build_state(self):
         """ The build_state function is called when the agent requests data from the 
